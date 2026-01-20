@@ -1,5 +1,3 @@
-# ==================== terraform/security.tf ====================
-
 resource "aws_security_group" "alb" {
   name        = "${var.project_name}-alb-sg"
   description = "Security group for ALB"
@@ -77,3 +75,4 @@ resource "aws_security_group" "rds" {
     Name = "${var.project_name}-rds-sg"
   }
 }
+
