@@ -597,7 +597,5 @@ For issues or questions:
 3. Review this documentation's troubleshooting section
 4. Check AWS Service Health Dashboard for regional issues
 
----
 
-**Last Updated**: January 2026  
-**Version**: 1.0
+
