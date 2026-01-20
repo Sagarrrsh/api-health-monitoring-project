@@ -8,6 +8,5 @@
 
 # Workflow
 
-<img width="1536" height="1024" alt="ChatGPT Image Jan 19, 2026, 09_13_19 PM" src="https://github.com/user-attachments/assets/e6021f1f-4a61-4068-aa89-4a7c35318e4c" />
-
+<img width="741" height="470" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/6e7366ff-942d-44b7-a274-3a6d27c91aa5" />
 
