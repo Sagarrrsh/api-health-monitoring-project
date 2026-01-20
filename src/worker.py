@@ -36,7 +36,7 @@ def post_webhook(webhook_url: str, payload: dict):
 
     try:
         text_msg = (
-            f"🔔 *API Status Changed*\n"
+            f" *API Status Changed*\n"
             f"*Name:* {payload.get('name')}\n"
             f"*URL:* {payload.get('url')}\n"
             f"*Old:* {payload.get('old_status')} -> *New:* {payload.get('new_status')}\n"
@@ -183,3 +183,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
