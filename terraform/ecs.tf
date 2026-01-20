@@ -42,7 +42,8 @@ resource "aws_cloudwatch_log_group" "db_init" {
   }
 }
 
-# ==================== DB INIT TASK (run once manually) ====================
+# -------- DB INIT TASK
+
 resource "aws_ecs_task_definition" "db_init" {
   family                   = "${var.project_name}-db-init"
   network_mode             = "awsvpc"
@@ -76,7 +77,8 @@ resource "aws_ecs_task_definition" "db_init" {
   }
 }
 
-# ==================== API TASK ====================
+# ------------ API TASK 
+
 resource "aws_ecs_task_definition" "api" {
   family                   = "${var.project_name}-api"
   network_mode             = "awsvpc"
@@ -115,7 +117,8 @@ resource "aws_ecs_task_definition" "api" {
   }
 }
 
-# ==================== SCHEDULER TASK ====================
+# -------  SCHEDULER TASK
+
 resource "aws_ecs_task_definition" "scheduler" {
   family                   = "${var.project_name}-scheduler"
   network_mode             = "awsvpc"
@@ -159,7 +162,8 @@ resource "aws_ecs_task_definition" "scheduler" {
   }
 }
 
-# ==================== WORKER TASK ====================
+# -------- WORKER TASK 
+
 resource "aws_ecs_task_definition" "worker" {
   family                   = "${var.project_name}-worker"
   network_mode             = "awsvpc"
@@ -203,7 +207,8 @@ resource "aws_ecs_task_definition" "worker" {
   }
 }
 
-# ==================== API SERVICE ====================
+# --------- API SERVICE 
+
 resource "aws_ecs_service" "api" {
   name            = "${var.project_name}-api"
   cluster         = aws_ecs_cluster.main.id
@@ -232,7 +237,8 @@ resource "aws_ecs_service" "api" {
   }
 }
 
-# ==================== SCHEDULER SERVICE ====================
+# ----------- SCHEDULER SERVICE 
+
 resource "aws_ecs_service" "scheduler" {
   name            = "${var.project_name}-scheduler"
   cluster         = aws_ecs_cluster.main.id
@@ -251,7 +257,8 @@ resource "aws_ecs_service" "scheduler" {
   }
 }
 
-# ==================== WORKER SERVICE ====================
+# ------- WORKER SERVICE 
+
 resource "aws_ecs_service" "worker" {
   name            = "${var.project_name}-worker"
   cluster         = aws_ecs_cluster.main.id
@@ -269,3 +276,4 @@ resource "aws_ecs_service" "worker" {
     Name = "${var.project_name}-worker-service"
   }
 }
+
