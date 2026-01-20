@@ -211,10 +211,10 @@ No HTTPS on load balancer - traffic visible in transit. Database password in env
 
 ### Production Fixes
 
-**Immediate (Week 1):** Enable HTTPS with ACM certificate, move database password to Secrets Manager, add API key authentication.
+**Immediate :** Enable HTTPS with ACM certificate, move database password to Secrets Manager, add API key authentication.
 
-**Short-term (Week 2):** Implement rate limiting at 100 requests/minute, enable CloudTrail for audit logs, configure VPC Flow Logs.
+**Short-term :** Implement rate limiting at 100 requests/minute, enable CloudTrail for audit logs, configure VPC Flow Logs.
 
-**Long-term (Month 2):** Deploy NAT Gateway and move ECS to private subnets, add WAF rules for attack protection, implement IP allowlisting.
+**Long-term :** Deploy NAT Gateway and move ECS to private subnets, add WAF rules for attack protection, implement IP allowlisting.
 
 **Trade-off:** Current setup works for internal tools and demos. Production systems need HTTPS and secrets management immediately. Other security features can wait for product traction.
