@@ -24,7 +24,7 @@ resource "aws_db_instance" "postgres" {
   db_subnet_group_name   = aws_db_subnet_group.main.name
   vpc_security_group_ids = [aws_security_group.rds.id]
 
-  backup_retention_period = 0
+  backup_retention_period = 7
   skip_final_snapshot     = true
   publicly_accessible     = false
 
@@ -32,3 +32,4 @@ resource "aws_db_instance" "postgres" {
     Name = "${var.project_name}-postgres"
   }
 }
+
