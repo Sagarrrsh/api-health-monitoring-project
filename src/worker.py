@@ -22,7 +22,7 @@ if not SQS_QUEUE_URL:
 
 engine = create_engine(DATABASE_URL)
 
-# AWS ONLY (no LocalStack)
+
 sqs = boto3.client("sqs", region_name=AWS_REGION)
 
 
@@ -183,4 +183,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
