@@ -50,8 +50,7 @@ Polls SQS queue for health check messages and executes HTTP validations. Retriev
 **How a monitor works from creation to alert:**
 
 
-<img width="791" height="561" alt="Untitled Diagram drawio (9)" src="https://github.com/user-attachments/assets/d2b9c61f-9572-4290-836d-56c1c625f7f0" />
-
+<img width="791" height="561" alt="Untitled Diagram drawio (9)" src="https://github.com/user-attachments/assets/34776e84-4986-4a67-9b48-29cecdedf54e" />
 
 1. **User creates monitor** → API validates input → Saves to PostgreSQL database
 
@@ -77,9 +76,7 @@ Polls SQS queue for health check messages and executes HTTP validations. Retriev
 
 ## Architecture Diagram
 
-
-
-![Architecture](https://github.com/user-attachments/assets/2324f7f7-0eb1-4a74-ae3e-0d08adf2d26f)
+![Architecture](https://github.com/user-attachments/assets/cbdf7c2e-b35a-4eac-824f-f16caf89543b)
 
 **High-Level Flow:**
 ```
