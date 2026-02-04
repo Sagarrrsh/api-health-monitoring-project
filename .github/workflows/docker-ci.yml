@@ -34,7 +34,7 @@ jobs:
       - name: Build & push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: services/${{ matrix.service }}
+          context: docker
           push: true
           tags: |
             ghcr.io/${{ env.OWNER_LOWER }}/demo-scrap/scrapzee-${{ matrix.service }}:latest
