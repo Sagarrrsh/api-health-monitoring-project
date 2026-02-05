@@ -41,7 +41,17 @@ jobs:
           push: false
           tags: ghcr.io/${{ env.OWNER_LOWER }}/demo-scrap/scrapzee-${{ matrix.service }}:ci
 
-      - name: Trivy scan (block CRITICAL only)
+      - name: Trivy scan (show ALL)
+        uses: aquasecurity/trivy-action@0.24.0
+        with:
+          image-ref: ghcr.io/${{ env.OWNER_LOWER }}/demo-scrap/scrapzee-${{ matrix.service }}:ci
+          vuln-type: os,library
+          severity: LOW,MEDIUM,HIGH,CRITICAL
+          ignore-unfixed: true
+          format: table
+          exit-code: 0
+
+      - name: Trivy gate (fail only on CRITICAL)
         uses: aquasecurity/trivy-action@0.24.0
         with:
           image-ref: ghcr.io/${{ env.OWNER_LOWER }}/demo-scrap/scrapzee-${{ matrix.service }}:ci
@@ -51,7 +61,7 @@ jobs:
           format: table
           exit-code: 1
 
-      - name: Push image (only if scan passed)
+      - name: Push image
         uses: docker/build-push-action@v5
         with:
           context: .
